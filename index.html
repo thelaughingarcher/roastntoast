@@ -1,15 +1,33 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dad's Birthday Celebration</title>
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROAST AND TOAST</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
             background-color: #f8f9fa;
+            overflow: hidden;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            z-index: -1;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .container {
             max-width: 600px;
@@ -18,35 +36,65 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         h1 {
             color: #333;
+            font-size: 2em;
         }
         p {
             color: #555;
+            font-size: 1.2em;
         }
         .cta-button {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 24px;
             margin-top: 15px;
-            background-color: #007bff;
+            background-color: #D21013;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
         }
         .cta-button:hover {
-            background-color: #0056b3;
+            background-color: #D21013;
+        }
+        .form-container {
+            margin-top: 30px;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        audio {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            z-index: 100;
         }
     </style>
-    </head>
-    <body>
-        <div class="container">
-            <h1>You're Invited!</h1>
-            <p>Join us in celebrating Dad's birthday! Details coming soon.</p>
-            <a href="#" class="cta-button">RSVP Here</a>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>You're Invited!</h1>
+        <p> Get your jokes and gear ready - It's time to celebrate the King's 50th Birthday. </p>
+            
+        <p>RSVP to get on the Roast Roster, but be prepared for Eugene to get his lick back at the end.  Hope to see you there! </p>
+        <a href="#form" class="cta-button">RSVP Here</a>
+        
+        <div class="form-container" id="form">
+            <h2>RSVP Below</h2>
+            <iframe src="YOUR_GOOGLE_FORM_EMBED_LINK"></iframe>
         </div>
-    </body>
+    </div>
+    <audio controls autoplay loop>
+        <source src="YOUR_AUDIO_FILE_URL" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
 </html>
-<svg style="left:166.335px;top:333.894px;position:absolute;width:20px;height:20px;overflow:visible;stroke:black;stroke-width:3;">
-    <line x1="10" y1="10" x2="10.234375" y2="10"></line>
-</svg>
